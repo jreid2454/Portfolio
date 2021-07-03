@@ -167,6 +167,11 @@ body{
     opacity: 0;
 }
 
+#cube5{
+    visibility: hidden;
+    opacity: 0;
+}
+
 .projectInfo{
     position: absolute;
     display: flex;
@@ -256,6 +261,11 @@ body{
 }
 
 #mobile4{
+    flex: 1;
+    order: 4;
+}
+
+#mobile5{
     flex: 1;
     order: 4;
 }

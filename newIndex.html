@@ -182,12 +182,16 @@
     $("#button4").on("click", () =>{ 
         $("#cube4").fadeOut();
     })
+    $("#button5").on("click", () =>{ 
+        $("#cube5").fadeOut();
+    })
 
 
     const showCube1 = document.getElementById("cube1");
     const showCube2 = document.getElementById("cube2");
     const showCube3 = document.getElementById("cube3");
     const showCube4 = document.getElementById("cube4");
+    const showCube5 = document.getElementById("cube5");
 
     function hideAll(){
         showCube1.style.visibility = "hidden";
@@ -198,6 +202,8 @@
         showCube3.style.opacity = 0;
         showCube4.style.visibility = "hidden";
         showCube4.style.opacity = 0;
+        showCube5.style.visibility = "hidden";
+        showCube5.style.opacity = 0;
     }
 
     function show(item) {
@@ -225,6 +231,9 @@
     })
     $("#mobile4").on("click", () =>{ 
         show(showCube4);
+    })
+    $("#mobile5").on("click", () =>{ 
+        show(showCube5);
     })
 
     })
@@ -348,6 +357,7 @@
             <button id="mobile2">PROJECT 2</button>
             <button id="mobile3">PROJECT 3</button>
             <button id="mobile4">PROJECT 4</button>
+            <button id="mobile5">PROJECT 5</button>
         </div>
         <div id="cube1" class="projectInfo">
             <h1>The Resume Blog</h1>
@@ -384,7 +394,7 @@
         <div id="cube3" class="projectInfo">
             <h1>Unbeatable Tic-Tac-Toe</h1>
             <span><img src="./ticTacPic" alt="Alternate Text" /></span>
-            <p>
+            <p style='font-size: 2.6vh'>
                 This is one of the first projects I did, utilizing basic javascript, HTML, and CSS. That said, just because I 
                 didn't use anything fancy, doesn't mean this was an easy one! In this game, the computer,
                 can either go first or second. Every move you make has a specific counter move programmed in, depending on many factors in the game. This is done
@@ -413,6 +423,24 @@
                 <div class="buttons">
                     <a href="http://jreidresume.hopto.org:82"><button>GO SEE IT!</button></a>
                     <button id="button4">EXIT</button>
+                </div>
+        </div>
+        <div id="cube5" class="projectInfo">
+            <h1>Tribal Network</h1>
+            <span><img src="./tribalPic" alt="Alternate Text" /></span>
+            <p style='font-size: 2.5vh'>
+                During my time spent working on this project, I was able to experience working with a development team 
+                remotely for the first time. During the first 6 months, I developed multiple pages and features from the 
+                ground up, such as a global search feature, a watchlist page, the backend of a film submission feature, 
+                and helped create many more before taking over as the Dev Ops Team lead later on. Managing over 6-7 developer 
+                interns at a time, I took on the responsibilities of planning our stacks architecture, managing our repository,
+                as well as conducting interviews and onboarding new interns.
+            </br></br>
+            <i>Tools: AWS (Lambda, RDS, DynamoDB, Amplify, S3, API Gateway), React, GraphQL</i>
+            </p>
+                <div class="buttons">
+                    <a href="https://tribalnetwork.org"><button>GO SEE IT!</button></a>
+                    <button id="button5">EXIT</button>
                 </div>
         </div>
         

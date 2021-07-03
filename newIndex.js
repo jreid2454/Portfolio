@@ -1,7 +1,7 @@
 import * as OrbitControls from "/orbit"
 
 let scene, camera, renderer, controls;
-let cube1, cube2, cube3, cube4;
+let cube1, cube2, cube3, cube4, cube5;
 const canvas = document.getElementById("box4");
 const canvasHeader = document.getElementById("projectHeader");
 
@@ -9,6 +9,7 @@ const canvasHeader = document.getElementById("projectHeader");
     const showCube2 = document.getElementById("cube2");
     const showCube3 = document.getElementById("cube3");
     const showCube4 = document.getElementById("cube4");
+    const showCube5 = document.getElementById("cube5");
 
     function hideAll(){
         showCube1.style.visibility = "hidden";
@@ -19,6 +20,8 @@ const canvasHeader = document.getElementById("projectHeader");
         showCube3.style.opacity = 0;
         showCube4.style.visibility = "hidden";
         showCube4.style.opacity = 0;
+        showCube5.style.visibility = "hidden";
+        showCube5.style.opacity = 0;
     }
 
     function show(item) {
@@ -66,10 +69,13 @@ function init(){
     const material3 = new THREE.MeshBasicMaterial( {map: texture3});
     const texture4 = new THREE.TextureLoader().load("/cube4")
     const material4 = new THREE.MeshBasicMaterial( {map: texture4});
+    const texture5 = new THREE.TextureLoader().load("/cube5") // make 5
+    const material5 = new THREE.MeshBasicMaterial( {map: texture5}); //make 5
     cube1 = new THREE.Mesh(geometry, material1);
     cube2 = new THREE.Mesh(geometry, material2);
     cube3 = new THREE.Mesh(geometry, material3);
     cube4 = new THREE.Mesh(geometry, material4);
+    cube5 = new THREE.Mesh(geometry, material5); // make 5
     
     cube1.position.z = 5;
     cube1.position.x = -5;
@@ -85,6 +91,11 @@ function init(){
     cube4.position.x = 5;
     cube4.position.z = -5;
     cube4.rotation.y = 1.1;
+
+    cube5.position.x = 0;
+    cube5.position.z = 0;
+    cube5.position.y = 5;
+    cube5.rotation.y = 1.1;
 
 
 
@@ -111,7 +122,9 @@ function init(){
     domEvents.addEventListener(cube4, "click", event => {
         show(showCube4);
     })
-
+    domEvents.addEventListener(cube5, "click", event => {
+        show(showCube5);
+    })
     
 
 
@@ -120,7 +133,7 @@ function init(){
     camera.position.z = 18;
     camera.position.y = 5;
 
-    scene.add(cube1, cube2, cube3, cube4);
+    scene.add(cube1, cube2, cube3, cube4, cube5);
 
     
 }
@@ -133,6 +146,7 @@ function animate() {
     cube2.rotation.y += 0.005;
     cube3.rotation.y += 0.005;
     cube4.rotation.y += 0.005;
+    cube5.rotation.y += 0.005;
 
     renderer.render(scene, camera);
 }

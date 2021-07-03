@@ -67,6 +67,9 @@ app.get("/groceryPic", (req, res) => {
     app.get("/cube4", (req, res) => {
         res.sendFile(__dirname + "/" + "./project4Cube.png")
     });
+    app.get("/cube5", (req, res) => {
+        res.sendFile(__dirname + "/" + "./project5Cube.png")
+    });
     // end new page
 app.get("/oldIndex", (req, res) => {
     res.sendFile(__dirname + "/" + "index.html")
@@ -121,6 +124,9 @@ app.get("/backEndPic", (req, res) =>{
 })
 app.get("/reactPic", (req, res) =>{
     res.sendFile(__dirname + "/landingPageImg/react.png")
+})
+app.get("/tribalPic", (req, res) =>{
+    res.sendFile(__dirname + "/landingPageImg/tribal.png")
 })
 app.get("/jquery", (req, res) => {
     res.sendFile(__dirname + "/" + "jquery.js")
