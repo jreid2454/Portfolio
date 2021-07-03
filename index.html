@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joshua Reid</title>
+    <link href="/indexStyle" rel="stylesheet" />
+    <script src="/jquery"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            var title = document.getElementById("title");
+            var subtitle = document.getElementById("subtitle");
+              var value = window.scrollY;
+            title.style.right = value * 1.5 + "px";
+            title.style.top = value * .5 + "px";
+            subtitle.style.left = value * 1.5 + "px";
+            subtitle.style.top = value * .5 + "px";
+        })
+        $(document).ready(function () {
+
+            function blur(select) {
+                if (select.value == false) {
+                    select.info.css("visibility", "visible");
+                    select.info.css("opacity", "1");
+                    select.name.css("-webkit-filter", "blur(8px)");
+                    select.value = true; 
+                } else {
+                    select.info.css("visibility", "hidden");
+                    select.info.css("opacity", "0");
+                    select.name.css("-webkit-filter", "blur(0px)")
+                    select.value = false;
+                }
+            }
+            var blog = {
+                name: $("#blog"),
+                info: $("#blogInfo"),
+                value: false
+            }
+            var reidAuto = {
+                name: $("#reidAuto"),
+                info: $("#reidInfo"),
+                value: false
+            }
+            var ticTac = {
+                name: $("#ticTac"),
+                info: $("#ticTacInfo"),
+                value: false
+            }
+            $("#blog").on("click", () => {blur(blog);})
+            $("#reidAuto").on("click", () => { blur(reidAuto) })
+            $("#ticTac").on("click", () => { blur(ticTac)})
+        })
+    </script>
+</head>
+<body>
+    <div id="intro">
+        <div id="innerIntro">
+            <h1 id="title"><span>&lt</span>Joshua Reid<span>/&gt</span></h1>
+            <h3 id="subtitle"><span>&lt</span>Full Stack Developer<span>/&gt</span></h3>
+            <div>
+                <img src="./htmlPic" alt="HTML" id="html" />
+                <img src="./cssPic" alt="CSS" id="css" />
+                <img src="./jsPic" alt="JavaScript" id="js" />
+                <img src="./nodePic" alt="Node.Js" id="node" />
+                <img src="./expressPic" alt="Express Js" id="express" />
+                <img src="./mysqlPic" alt="MySQL" id="mysql" />
+                <img src="./jqueryPic" alt="jQuery" id="jquery" />
+                <img src="./reactPic" alt="React" id="react" />
+            </div>
+        </div>
+       <div id=lights>
+        <div class="light-column" id="light1">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light2">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light3"> 
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light4">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light5">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light6">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light7">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light8">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light9">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light10">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light11">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light12">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light13">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light14">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light15">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div class="light-column" id="light16">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+    </div>
+    </div>
+    <div id="aboutInst">
+        <h4><em>Select The Picutes to See More...</em></h4>
+    </div>
+    <div id="aboutMe">
+        <div class="aboutItem">
+            <img src="./frontEndPic" />
+            <div>
+                <h3>Front-End Development</h3>
+                <p>
+                    I create professional look and feel for your small business, click funnel, or E-commerce site.
+                    I use the following technologies to create this experience for my clients:
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Jquery</li>
+                        <li>React</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="aboutItem">
+            <img src="./backEndPic" />
+            <div>
+                <h3>Back-End Development</h3>
+                <p>
+                    You can rely on me to make a Back-End for any web application that will work efficiently and reliably.
+                    I use the following tools to craft such platforms:
+                    <ul>
+                        <li>Node.Js</li>
+                        <li>Express.Js</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="aboutItem">
+            <img src="./mobilePic" />
+            <div>
+                <h3>Responsive Web Design</h3>
+                <p>
+                    All of my websites will work on any device, big or small. You will never need to worry about
+                    your website turning away customers due to improper design for a mobile device.
+                </p>
+            </div>
+        </div>
+        <div class="aboutItem">
+            <img src="./dynamicPic" />
+            <div>
+                <h3>Dynamic Web Expierence</h3>
+                <p>
+                    Static websites are great, but for a lot of people that is not enough. I can create dynamic
+                    websites with animations and an excellent user experience, that the user will not soon forget.
+                </p>
+            </div>
+        </div>
+    </div>
+    <h1 id="projectsHead">PROJECTS</h1>
+    <div id="aboutInst">
+        <h4><em>Select The Picutes to See More...</em></h4>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <div id="blog" class="project">
+                <img src="./blogPic" alt="Alternate Text" />
+            </div>
+            <div class="projectInfo" id="blogInfo">
+                <h2>Resume Blog</h2>
+                <p>This is the most recent, and largest project I have done. Through this project 
+                I learned back-end development utilizing Node Js, and used Jquery to send most of 
+                my requests. I also learned how to use a database, my choice was MySQL. I learned 
+                alot from this project and it has really given me a foundation to continue to make
+                more full stack applications even better and more efficiently. <br />
+                <a href="/blog">Visit Site</a></p>
+
+            </div>
+        </div>
+        <div class="container">
+            <div id="reidAuto" class="project">
+                <img src="./reidAutoPic" alt="Alternate Text" />
+            </div>
+            <div class="projectInfo" id="reidInfo">
+                <h2>Reid's Auto Service</h2>
+                <p>This is the first real world project I have done, and is 
+                still in use today. This website is for my father’s auto repair 
+                shop in Philadelphia, and gave me the opportunity to show my ability
+                to make a website look professional and work continuously. I Used 
+                Jquery for the animation’s, and Node Js as the back-end. I also used
+                Google’s embedded HTML to create a map plug-in so user’s could get directions. <br />
+                <a href="http://jreidresume.hopto.org:81/reidauto">Visit Site</a></p>
+            </div>
+        </div>
+        <div class="container">
+            <div id="ticTac" class="project">
+                <img src="./ticTacPic" alt="Alternate Text" />
+            </div>
+            <div class="projectInfo" id="ticTacInfo">
+                <h2>Unbeatable Tic Tac Toe</h2>
+                <p>This is probably the second largest project I have done, 
+                although it does not look like much, this Tic Tac Toe game accounts 
+                for every possible decision you can make. Regardless if you go first,
+                or second, it will never lose, only win or tie. Don’t believe me? Give it a shot! <br />
+                <a href="/tic_tac">Visit Site</a></p>
+            </div>
+        </div> 
+        </div>
+        <div id="contact-wrapper">
+            <div id="contact">
+                <h2 class="subContact">Contact Me</h2>
+                <h3 class="subContact">Email: <a href="mailto:jreid2454@yahoo.com">jreid2454@yahoo.com</a></h3>
+                <h3 class="subContact">Phone: <a href="tel:6094171259">(609) 417-1259</a></h3>
+            </div>
+        </div>
+</body>
+</html>

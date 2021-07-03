@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Reid's Portfolio</title>
+    <script src="https://kit.fontawesome.com/580b022d9b.js" crossorigin="anonymous"></script>
+    <script src="/jquery"></script>
+    <script src="/three"></script>
+    <script scr="/orbit"></script>
+    <script src="/threeDomEvents"></script>
+    <script src="/newIndexScript" language="javascript" type="module" defer></script>
+    <script>
+         window.addEventListener("scroll", function () {
+            var image = document.getElementById("image");
+            var value = window.scrollY;
+            image.style.opacity = 1 - value / 200;
+        })
+
+       $(document).ready(function () {
+        var top1 = {
+            top: $("#top1"),
+            text: $("#topText1"),
+            tracker: false,
+        }
+        var top2 = {
+            top: $("#top2"),
+            text: $("#topText2"),
+            tracker: false
+        }
+        var top3 = {
+            top: $("#top3"),
+            text: $("#topText3"),
+            tracker: false
+
+        }
+        var top5 = {
+            top: $("#top5"),
+            text: $("#topText5"),
+            tracker: false
+        }
+
+        top1.top.click(() => slide(top1));
+        top2.top.click(() => slideAlt(top2));
+        top3.top.click(() => slide(top3));
+        top5.top.click(() => slideUp5(top5));
+            
+        function slide (item){
+            if(item.tracker == false){
+                if (window.matchMedia('(max-width: 1200px)').matches){
+                item.top.animate({height: "12.5vh"},1000);
+                item.text.animate({top: "2vh"},1000)
+                item.tracker = true;
+            } else {
+                item.top.animate({width: "20%", marginLeft: "80%"},1000);
+                let x = 1
+                let rotate = setInterval(() =>{
+                    item.text.css({transform: 'rotate('+ x * 2 + 'deg)'})
+                    x += 1
+                    if(x >= 46){
+                        clearInterval(rotate);
+                        rotate = 0;
+                    }
+                }, 0.05)
+                item.tracker = true;
+            }
+            } else if (item.tracker == true){
+                if (window.matchMedia('(max-width: 1200px)').matches){
+                    item.top.animate({height: "80vh"},1000);
+                    item.text.animate({top: "40vh"},1000)
+                    item.tracker = false;
+                } else {
+                    item.top.animate({width: "100%", marginLeft: "0"},1000);
+                    let x = 90
+                    setTimeout(() => {
+                        let rotate = setInterval(() =>{
+                        item.text.css({transform: 'rotate('+ x + 'deg)'})
+                        x -= 1
+                        if(x <= -1){
+                            clearInterval(rotate);
+                            rotate = 0;
+                        }
+                    }, 0.1)},300)
+                    
+                    item.tracker = false
+                }
+            }
+        }
+
+        function slideAlt (item){
+            if(item.tracker == false){
+                if (window.matchMedia('(max-width: 1200px)').matches){
+                    item.top.animate({height: "12.5vh"},1000);
+                    item.text.animate({top: "2vh"},1000)
+                    item.tracker = true;
+                } else {
+                    item.top.animate({width: "20%", marginRight: "80%"},1000);
+                    let x = 1
+                    let rotate = setInterval(() =>{
+                        item.text.css({transform: 'rotate('+ -x * 2 + 'deg)'})
+                        x += 1
+                        if(x >= 46){
+                            clearInterval(rotate);
+                            rotate = 0;
+                        }
+                    }, 0.1)
+                    item.tracker = true;
+                }
+            } else if (item.tracker == true){
+                if (window.matchMedia('(max-width: 1200px)').matches){
+                    item.top.animate({height: "80vh"},1000);
+                    item.text.animate({top: "40vh"},1000)
+                    item.tracker = false;
+                } else {
+                    item.top.animate({width: "100%", marginLeft: "0"},1000);
+                    let x = -90
+                    setTimeout(() => {
+                    let rotate = setInterval(() =>{
+                        item.text.css({transform: 'rotate('+ x + 'deg)'})
+                        x += 1
+                        if(x >= 1){
+                            clearInterval(rotate);
+                            rotate = 0;
+                        }
+                    }, 0.1)}, 400)
+                    item.tracker = false
+                }
+            }
+        }
+
+        function slideUp5 (item){
+            if(item.tracker == false){
+                if (window.matchMedia('(max-width: 1200px)').matches){
+                    item.top.animate({height: "12.5vh"},1000);
+                    item.text.animate({top: "2vh"},1000)
+                    item.tracker = true;
+                } else {
+                    item.top.animate({width: "20%", marginRight: "80%"},1000);
+                    let x = 1
+                    let rotate = setInterval(() =>{
+                        item.text.css({transform: 'rotate('+ -x * 2 + 'deg)'})
+                        x += 1
+                        if(x >= 46){
+                            clearInterval(rotate);
+                            rotate = 0;
+                        }
+                    }, 0.1)
+                    item.tracker = true;
+                }
+            } else if (item.tracker == true){
+                if (window.matchMedia('(max-width: 1200px)').matches){
+                    item.top.animate({height: "110vh"},1000);
+                    item.text.animate({top: "40vh"},1000)
+                    item.tracker = false;
+                } else {
+                    item.top.animate({width: "100%", marginLeft: "0"},1000);
+                    let x = -90
+                    setTimeout(() => {
+                    let rotate = setInterval(() =>{
+                        item.text.css({transform: 'rotate('+ x + 'deg)'})
+                        x += 1
+                        if(x >= 1){
+                            clearInterval(rotate);
+                            rotate = 0;
+                        }
+                    }, 0.1)}, 400)
+                    item.tracker = false
+                }
+            }
+        }
+        
+
+    $("#button1").on("click", () =>{ 
+        $("#cube1").fadeOut();
+    })
+    $("#button2").on("click", () =>{ 
+        $("#cube2").fadeOut();
+    })
+    $("#button3").on("click", () =>{ 
+        $("#cube3").fadeOut();
+    })
+    $("#button4").on("click", () =>{ 
+        $("#cube4").fadeOut();
+    })
+
+
+    const showCube1 = document.getElementById("cube1");
+    const showCube2 = document.getElementById("cube2");
+    const showCube3 = document.getElementById("cube3");
+    const showCube4 = document.getElementById("cube4");
+
+    function hideAll(){
+        showCube1.style.visibility = "hidden";
+        showCube1.style.opacity = 0;
+        showCube2.style.visibility = "hidden";
+        showCube2.style.opacity = 0;
+        showCube3.style.visibility = "hidden";
+        showCube3.style.opacity = 0;
+        showCube4.style.visibility = "hidden";
+        showCube4.style.opacity = 0;
+    }
+
+    function show(item) {
+        hideAll();
+        item.style.visibility = "visible";
+        item.style.display = "flex";
+        let x = 0.1;
+        let fade = setInterval(() =>{
+            item.style.opacity = x;
+            x += 0.1
+            if(x >= 1){
+                clearInterval(fade);
+                fade = 0;
+            }
+        }, 75)
+    }
+    $("#mobile1").on("click", () =>{ 
+        show(showCube1);
+    })
+    $("#mobile2").on("click", () =>{ 
+        show(showCube2);
+    })
+    $("#mobile3").on("click", () =>{ 
+        show(showCube3);
+    })
+    $("#mobile4").on("click", () =>{ 
+        show(showCube4);
+    })
+
+    })
+    </script>
+    <link href="/newIndexStyle" rel="stylesheet"/>
+</head>
+<body>
+  <div id="grid">
+    <div id="title">
+        <h1 id="titleText">Joshua Reid</h1>
+        <h2 id="titleSub">Full Stack Developer</h2>
+    </div>
+
+    <div id="image">
+        <img id="myPic" src="/portfolioPic"/>
+    </div>
+
+    <div id="box1" class="boxes">
+        <div class="top" id="top1">
+            <h1 id="topText1" class="topText">Who I Am</h1>
+        </div>
+        <div class="bottom">
+            <p class="bottomText">
+                I am software and full stack web developer. I started my 
+	            journey to be a software developer around 2018. While still in
+	            the military, I first studied C++, Javascript, HTML, and CSS. I used
+	            anything and everything I could to learn, from YouTube videos, books,
+	            online courses, and learn-to-code apps. After feeling the satisfaction
+	            of seeing a project that you spent hours and hours on come to life, I
+	            was hooked. From then on I decided that I would do everything in my
+	            power to become a software developer.
+            </p>
+        </div>
+    </div>
+
+    <div id="box2" class="boxes">
+        <div class="top" id="top2">
+            <h1 id="topText2" class="topText">What I Know</h1>
+        </div>
+        <div class="bottom">
+            <ul class="alt">
+                <span>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JQuery</li>
+                <li>React</li>
+                <li>Axios</li>
+                <li>AJAX</li>
+                </span>
+                <span>
+                <li>GraphQl</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>MySql</li>
+                <li>AWS</li>
+                <li>Git / Github</li>
+                <li>C++ </li>
+                </span>
+            </ul>
+        </div>
+    </div>
+
+    <div id="box3" class="boxes">
+        <div class="top" id="top3">
+            <h1 id="topText3" class="topText">What I'm Learning</h1>
+        </div>
+        <div class="bottom">
+            <ul class="bottomText list">
+                <li>Three.js</li>
+                <li>Java</li>
+                <li>React Native</li>
+                <li>Wordpress Theme Development</li>
+                <li>PHP</li>
+                <li>SASS</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="box5" class="boxes">
+        <div class="top" id="top5">
+            <h1 id="topText5" class="topText">What You Can Expect</h1>
+        </div>
+        <div class="bottom" id="bottom5">
+            <p class="bigPara">
+                <strong>“Once you figure out the question, then the answer is relatively easy.”</strong> - Elon Musk. 
+            </br>
+            </br>
+                I believe there are two key aspects of problem solving that determine the quality of,  
+                and how quick you will come to, a solution. Those being: how you approach the problem, 
+                and your ability to learn how to implement the solution.
+            </br>
+            </br>
+                For me, the latter is done by reasoning from first principles. This essentially means to break down
+                 a problem into its most basic elements that cannot be determined from anything else. After this you 
+                 reassemble the elements from the ground up, eventually properly identifying the root of the problem. 
+                 Once you do this, it is easy to find the solution. But just because you know what has to be done, doesn’t 
+                 mean you know how to do it.
+            </br>
+            </br>
+                This brings me to my second key aspect, the ability to learn how to implement that solution. Any one 
+                in programming knows that no single person will always know all of the answers right away, especially 
+                in our world today with the constant emergence of new technologies. Instead, a much more important skill 
+                is the ability to learn, since it is inevitable that there will be a new piece of technology that will be desired 
+                to be implemented in any modern project. 
+            </br>
+            </br>
+                Being a self taught developer, I had to master those key aspects, and I believe utilizing those two things 
+                is what has made me successful so far, and what will enable me to succeed in my future endeavors.  
+
+            </p>
+        </div>
+    </div>
+
+    <div id="box4" class="boxes">
+        <div id="projectHeader">
+            <h1>What I've Done</h1>
+        </div>
+        <div id="mobileView">
+            <button id="mobile1">PROJECT 1</button>
+            <button id="mobile2">PROJECT 2</button>
+            <button id="mobile3">PROJECT 3</button>
+            <button id="mobile4">PROJECT 4</button>
+        </div>
+        <div id="cube1" class="projectInfo">
+            <h1>The Resume Blog</h1>
+            <span><img src="./blogPic" alt="Alternate Text" /></span>
+            <p>
+                I learned an incredible amount from making this project, it was my first full stack website. For the backend
+                I had to learn how to create a server, handle HTTP request, how a database works, and how to communicate and 
+                change that database from the server. For the Front end, I expanded my knowledge of controlling the DOM with javascript,
+                how to make and handle results from HTTP requests to the backend, and how to create a Sign Up / Log In feature.
+            </br></br>
+            <i>Tools: Node, Express, MySQL, JQuery, AJAX</i>
+            </p>
+            <div class="buttons">
+                <a href="/blog"><button>GO SEE IT!</button></a>
+                <button id="button1">EXIT</button>
+            </div>
+        </div>
+        <div id="cube2" class="projectInfo">
+            <h1>Reid's Auto Service</h1>
+            <span><img src="./reidAutoPic" alt="Alternate Text" /></span>
+            <p>
+                This was my first website for a real business, it's a simple static HTML website, with some javascript
+                used to make an image slider. Since this website would be actually used by customers, I had to pay extra
+                attention to the UX/UI of the website, This includes easily being able to see the hours of operation, 
+                the contact information, and even a google maps API plugin to automatically open GPS directions to the shop. 
+            </br></br>
+            <i>Tools: Node, Express, JQuery, HTML, CSS </i>
+            </p>
+                <div class="buttons">
+                    <a href="http://jreidresume.hopto.org:81/reidauto"><button>GO SEE IT!</button></a>
+                    <button id="button2">EXIT</button>
+                </div>
+        </div>
+        <div id="cube3" class="projectInfo">
+            <h1>Unbeatable Tic-Tac-Toe</h1>
+            <span><img src="./ticTacPic" alt="Alternate Text" /></span>
+            <p>
+                This is one of the first projects I did, utilizing basic javascript, HTML, and CSS. That said, just because I 
+                didn't use anything fancy, doesn't mean this was an easy one! In this game, the computer,
+                can either go first or second. Every move you make has a specific counter move programmed in, depending on many factors in the game. This is done
+                in such a way, that you will only ever be able to tie against the computer, it's impossible to beat it! Don't believe me?
+                Give it a shot!
+            </br></br>
+            <i>Tools: JavaScript, HTML, CSS </i>
+            </p>
+                <div class="buttons">
+                    <a href="/tic_tac"><button>GO SEE IT!</button></a>
+                    <button id="button3">EXIT</button>
+                </div>
+        </div>
+        <div id="cube4" class="projectInfo">
+            <h1>The Smart Grocery List</h1>
+            <span><img src="./groceryPic" alt="Alternate Text" /></span>
+            <p>
+                The Smart Grocery List is a React project that allows the user to label and meal, and list the ingredients 
+                for that meal. It then dynamically calculates the price of said meal based off of the ingredient cost. 
+                I learned a lot about using React.createRef() to index the individual inputs, and how to pass data from a 
+                child component to a parent component by passing a function as a prop. Feel free to use it on your next trip to the 
+                super market!
+            </br></br>
+            <i>Tools: React, CSS </i>
+            </p>
+                <div class="buttons">
+                    <a href="http://jreidresume.hopto.org:82"><button>GO SEE IT!</button></a>
+                    <button id="button4">EXIT</button>
+                </div>
+        </div>
+        
+    </div>
+
+    <div id="contact" class="boxes">
+        <div id="projectHeader">
+            <h1>Contact</h1>
+        </div>
+        <div id="icons">
+        <a href="https://www.linkedin.com/in/joshua-reid-b7548a177/"><i  class="fab fa-linkedin fa-3x" style="color: #10E7DC;"></i></a>
+        <a href="https://github.com/jreid2454"><i  class="fab fa-github fa-3x" style="color: #10E7DC;"></i></a>
+        <a href="mailto:jreid2454@yahoo.com"><i  class="far fa-envelope fa-3x" style="color: #10E7DC;"></i></a>
+        <a href="tel:6094171259"><i  class="fas fa-phone fa-3x" style="color: #10E7DC;"></i></a>
+        </div>
+        <p>Made by yours truly</p>
+    </div>
+  </div>
+</body>
+</html>

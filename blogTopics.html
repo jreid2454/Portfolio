@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <link href="/blog/blogStyle" rel="stylesheet" type="text/css" />
+    <script src="/jquery"></script>
+    <script src="/blog/blogScript" type="text/javascript" language="javascript"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <a id="header-title" href="/blog">The Resume Blog</a>
+            <ul id="header-nav">
+                <li><a href="/blog/topics">Topics</a></li>
+                <li class="logIn_signUp_header"><a href="/blog/logIn">Log In</a></li>
+                <li class="logIn_signUp_header"><a href="/blog/signUp">Sign Up</a></li>
+                <li id="loggedInUser"><a href="/blog/userProfile"></a></li>
+                <li id="logOut_header"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="slider_wrapper">
+        <div id="slider">
+            <ul id="slides">
+                <a href="/blog/topics/postInterview"><li class="slide" id="interview"><p><strong>Interview Tips</strong></p></li></a>
+                <a href="/blog/topics/postResume"><li class="slide" id="resume"><p><strong>Resume Best Practices</strong></p></li></a>
+                <a href="/blog/topics/postSelfTeaching"><li class="slide" id="coding"><p><strong>Self Teaching</strong></p></li></a>
+                <a href="/blog/topics/postTheJob"><li class="slide" id="working"><p><strong>After You Get The Job</strong></p></li></a>
+                <a href="/blog/topics/postOther"><li class="slide" id="other"><p><strong>Other Topics</strong></p></li></a>
+                <a href="/blog/topics/postInterview"><li class="slide" id="interview"><p><strong>Interview Tips</strong></p></li></a>
+            </ul>
+        </div>
+        <div id="slide_buttons">
+            <button type="button" id="prev">Prev</button>
+            <button type="button" id="next">Next</button>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</body>
+</html>

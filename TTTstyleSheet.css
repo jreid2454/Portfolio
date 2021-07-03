@@ -1,0 +1,134 @@
+﻿html{
+    height: 100%;
+}
+
+body{
+    /*background-image: linear-gradient(to bottom left, #0004ff, #00ebfc, #00fc00);*/
+    background-image: linear-gradient(to bottom left, #fffb00, #fc8600, #fc0000);
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+#wrapper{
+    background-color: rgba(0,0,0, .2);
+    height: 100vh;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-color: rgba(255,255,255,.75);
+    border-width: 0px;
+    margin: 0px;
+    padding: 10px;  
+    font-size: 75px;
+    font-family: sans-serif;
+    font-style: bold;
+    text-align: center;
+}
+.box.top{
+   border-bottom-width: 10px;
+}
+    .box.mid {
+      border-top-width: 10px;
+      border-bottom-width: 10px;
+    }
+    .box.bot {
+       border-top-width: 10px;
+    }
+    #top-left{
+        border-right-width: 10px;
+    }
+    #top-right{
+        border-left-width: 10px;
+    }
+    #top-mid{
+        border-right-width: 10px;
+        border-left-width: 10px;
+    }
+    #mid-mid{
+        border-right-width: 10px;
+        border-left-width: 10px;
+    }
+    #mid-left{
+        border-right-width: 10px;
+    }
+    #mid-right{
+        border-left-width: 10px;
+    }
+    #bot-left{
+        border-right-width: 10px;
+    }
+    #bot-right{
+        border-left-width: 10px;
+    }
+#bot-mid {
+    border-right-width: 10px;
+    border-left-width: 10px;
+}
+#table {
+    margin: auto;
+}
+#text{
+    display: inline-block;
+}
+#gosec{
+    width: 20vw;
+    height: 7.5vh;
+    background-color: rgba(0,0,0,0);
+    color:rgba(0, 4, 255,.7);
+    border: 2px solid rgba(0, 4, 255, .7);
+    border-radius: 25px;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 5vh;
+}
+#gosec:hover{
+    background-color: rgba(0, 4, 255, .7);
+    color:#fc8600;
+}
+#reset{
+    width: 20vw;
+    height: 7.5vh;
+    background-color: rgba(0,0,0,0);
+    color:rgba(0, 4, 255,.7);
+    border: 2px solid rgba(0, 4, 255, .7);
+    border-radius: 25px;
+    font-family: sans-serif;
+    font-size: 5vh;
+    outline: none;
+    margin-top: 7.5vh;
+}
+#reset:hover{
+    background-color: rgba(0, 4, 255, .7);
+    color:#fc8600;
+}
+#buttons{
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+#win{
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 10vh;
+    font-family: sans-serif;
+    font-size: 5vh;
+}
+#ticTacHeader{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10vw 0 10vw;
+    font-family: sans-serif;
+}
+#portLink > a{
+    color: rgba(0, 4, 255, .7);
+    text-decoration: none;
+}
+#portLink > a:hover{
+    text-decoration: underline;
+}

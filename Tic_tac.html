@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="/tic_tac/script" language="javascript" type="text/javascript"></script>
+    <link href="/tic_tac/style" rel="stylesheet" />
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <div id="wrapper">
+    <div id="ticTacHeader">
+    <h2 id="portLink"><a href="/index">Back To My Portfolio</a></h2>
+    </div>
+    <table id="table" cellspacing="0">
+        <tr>
+            <td id="top-left" class="box top" onclick="topleft()"></td>
+            <td id="top-mid" class="box top" onclick="topmid()"></td>
+            <td id="top-right" class="box top" onclick="topright()"></td>
+        </tr>
+        <tr>
+            <td id="mid-left" class="box mid" onclick="midleft()"></td>
+            <td id="mid-mid" class="box mid" onclick="midmid()"></td>
+            <td id="mid-right" class="box mid" onclick="midright()"></td>
+        </tr>
+        <tr>
+            <td id="bot-left" class="box bot" onclick="botleft()"></td>
+            <td id="bot-mid" class="box bot" onclick="botmid()"></td>
+            <td id="bot-right" class="box bot" onclick="botright()"></td>
+        </tr>
+    </table>
+    <div id="buttons">
+        <button id="gosec" onclick="goSecond()">Go Second!</button>
+        <button id="reset" onclick="reset()">Reset Game</button>
+    </div>
+    <div id="win">
+        <h1 id="winner"></h1>
+    </div>
+    </div>
+</body>
+</html>

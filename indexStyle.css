@@ -1,0 +1,285 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+}
+@viewport{
+    width: device-width;
+}
+    body > #aboutHeader {
+        text-align: center;
+    }
+
+#intro {
+    overflow: hidden;
+    padding-top: 10vh;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: flex-end;
+    background-color: rgb(38, 36, 36);
+}
+
+#innerIntro {
+    text-align: center;
+    z-index: 100;
+}
+#innerIntro span{
+    color: rgb(38, 28, 196)
+}
+    #innerIntro h1 {
+        position: relative;
+        bottom: 10vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 6vw;
+        color: white;
+        text-shadow: 0 0 90px #ffffff;
+    }
+    #innerIntro h3 {
+        position: relative;
+        bottom: 10vh;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2vw;
+        color: white;
+        text-shadow: 0 0 90px #ffffff;
+    }
+#lights{
+    width: 100%;
+    position: relative;
+    bottom: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.light-column{
+    width: 1vw;
+    height: 80vh;
+    position: relative;
+}
+.light{
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    height:.1vh;
+    width: .1vw;
+    border: 1px solid;
+    background-color: transparent;
+    z-index: -100;
+    webkit-animation: glow 4s ease-in-out infinite alternate;
+    -moz-animation: glow 4s ease-in-out infinite alternate;
+    animation: glow 4s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 30px #00f, 0 0 35px #ffffff, 0 0 40px #00f, 0 0 50px #ffffff;
+        border-color: white;
+    }
+
+    33.3% {
+        box-shadow: 0 0 20px transparent;
+        border-color: transparent;
+    }
+    66.6% {
+        box-shadow: 0 0 20px #ffffff, 0 0 30px #00f, 0 0 35px #00f, 0 0 40px #00f, 0 0 45px #00f, 0 0 50px #00f, 0 0 60px #00f;
+        border-color: blue;
+    }
+    100% {
+        box-shadow: 0 0 20px transparent; 
+        border-color: transparent;
+    }
+}
+
+#innerIntro > div{
+    margin: auto;
+    width: 100%;
+
+}
+#innerIntro img {
+    min-width: 7vw;
+    max-width: 14vw;
+    min-height: 7vh;
+    max-height: 14vh;
+    animation-name: images;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+@keyframes images{
+    0%{opacity: 0; transform: rotateY(180deg);}
+    50%{transform: rotateY(90deg);}
+    100%{opacity: 1; transform: rotateY(0deg);}
+}
+
+#title {
+    position: relative;
+}
+#subtitle {
+    position: relative;
+}
+#aboutInst{
+    text-align: center;
+}
+#aboutInst > h4{
+    font-size: 2vw;
+    color: rgb(128,128,128);
+}
+#aboutMe {
+    margin: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    justify-content: space-around;
+    grid-column-gap: 5vh;
+    grid-row-gap: 5vh;
+    
+}
+
+.aboutItem {
+    text-align: center;
+    display: grid;
+}
+
+    .aboutItem > div {
+        align-self: center;
+        justify-self: center;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        position: relative;
+        top: auto;
+        transition-property: opacity;
+        transition-duration: 1.5s;
+        opacity: 0;
+        z-index: 3;
+        font-size: 2.5vw;
+        width: 40vw;
+        background-color: rgba(128, 128, 128, .5);
+        border: 1px white solid;
+        box-shadow: 0 0 30px black;
+        padding: 1vw;
+    }
+    .aboutItem img {
+        align-self: center;
+        justify-self: center;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: 25px;
+        min-width: 15vw;
+        max-width: 30vw;
+        max-height: 30vh;
+        min-height: 15vh;
+        transition-property: all;
+        transition-duration: 1s;
+        z-index: 4;
+    }
+
+    .aboutItem img:hover {
+        transform: rotateZ(180deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+        .aboutItem img:hover + div {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    .aboutItem ul {
+        list-style-type: none;
+    }
+
+#projectsHead {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 14vw;
+    font-weight: 10000;
+    font-family: "Arial Black", Gadget, sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(/projectsPic);
+    background-attachment: fixed;
+    background-repeat: none;
+    background-size: 100%;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#projects{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.project{
+    max-width: 100%;
+    min-width: 10%;
+    max-height: 118vh;
+    min-height: 40vh;
+    margin: 0;
+    margin-top: 5vh;
+    padding: 0;
+    transition-property: all;
+    transition-duration: 1s;   
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.project > img{
+    width: 100%;
+    height: 100%;
+    transition-property: all;
+    transition-duration: 2s;
+    z-index: 1;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.projectInfo {
+    background-color: rgba(128, 128, 128, .5);
+    border: 1px white solid;
+    box-shadow: 0 0 30px black;
+    padding: 5%;
+    transition-property: all;
+    transition-duration: 1.5s;
+    visibility: hidden;
+    opacity: 0;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+    max-width: 60%;
+    min-width: 10%;
+    max-height: 118vh;
+    min-height: 40vh;
+    z-index: 100;
+    text-align: center;
+}
+.projectInfo h2{
+    font-size: 5vw;
+}
+.projectInfo p{
+    font-size: 3vw;
+}
+#contact-wrapper{
+    background: repeating-linear-gradient(to right,white,blue);
+    margin-bottom: 10%;
+    padding: 10px;
+}
+#contact {
+    background-color: rgb(38, 36, 36);
+    text-align: center;
+    margin: 0;
+    padding: 5vh;
+    color: white;
+    height: 30%;
+}
+#contact > h2{
+    font-size: 5vw;
+}
+#contact > h3{
+    font-size: 3vw;
+}
+.subContact > a{
+    color: inherit;
+}
