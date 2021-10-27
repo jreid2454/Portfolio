@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // make function that gets url, and redirects based on url
+            function redirect(url){
+                if(url.includes('reidsauto')){
+                    window.location.href = "http://reidsauto.ddnsking.com:81";
+                } else if(url.includes('jreidresume')){
+                    window.location.href = "http://jreidresume.hopto.org:80/index";
+                } else{
+                    window.location.href = "http://jreidresume.hopto.org:80/index";
+                }
+            }
+    
+            // get current url
+            var url = window.location.href;
+            redirect(url);
+        </script>
+    </head>
+</html>
+
