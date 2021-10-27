@@ -23,6 +23,9 @@ app.listen(80);
 console.log("The server is working");
 
 //      **Get request**
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/" + "redirect.html")
+});
     //start for new page
 app.get("/Index", (req, res) => {
     res.sendFile(__dirname + "/" + "newIndex.html")
