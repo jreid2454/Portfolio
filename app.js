@@ -5,17 +5,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
 //          **Connects to MySQL database**
-const con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "hsoj1234",
-    //port: 8000
-});
-con.connect(function (err) {
-    if (err) throw err;
-    console.log("Connected to Database!");
-});
-con.query("USE resume");
+// const con = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "hsoj1234",
+//     //port: 8000
+// });
+// con.connect(function (err) {
+//     if (err) throw err;
+//     console.log("Connected to Database!");
+// });
+// con.query("USE resume");
 
 
 //          **Makes server on port 80**
