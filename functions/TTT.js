@@ -673,9 +673,15 @@ function rule3CrossLR() {
                 play()
             } else{
                 if(mid2 == 1 && bot2 == 0){
-                    bot2 = 2;
-                    print(8);
-                    play()
+                    if(bot0 == 1 && bot1 == 2){
+                        top0 = 2;
+                        print(0);
+                        play()
+                    } else {
+                        bot2 = 2;
+                        print(8);
+                        play()
+                    }
                 } else{
                     top0 = 2
                     print(0)
