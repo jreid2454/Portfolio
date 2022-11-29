@@ -19,7 +19,7 @@ body{
 #title{
     height: 60vh;
     grid-row: 1;
-    background-image: url('/mountainPic');
+    background-image: url('mountainPic');
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;

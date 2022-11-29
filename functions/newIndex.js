@@ -1,4 +1,4 @@
-import * as OrbitControls from "/orbit"
+import * as OrbitControls from "/app/orbit"
 
 let scene, camera, renderer, controls;
 let cube1, cube2, cube3, cube4, cube5;
@@ -61,15 +61,15 @@ function init(){
     //document.addEventListener('touchend', onDocumentTouchEnd, false);
     
     const geometry = new THREE.BoxGeometry(3, 3, 3);
-    const texture1 = new THREE.TextureLoader().load("/cube1")
+    const texture1 = new THREE.TextureLoader().load("app/cube1")
     const material1 = new THREE.MeshBasicMaterial( {map: texture1});
-    const texture2 = new THREE.TextureLoader().load("/cube2")
+    const texture2 = new THREE.TextureLoader().load("app/cube2")
     const material2 = new THREE.MeshBasicMaterial( {map: texture2});
-    const texture3 = new THREE.TextureLoader().load("/cube3")
+    const texture3 = new THREE.TextureLoader().load("app/cube3")
     const material3 = new THREE.MeshBasicMaterial( {map: texture3});
-    const texture4 = new THREE.TextureLoader().load("/cube4")
+    const texture4 = new THREE.TextureLoader().load("app/cube4")
     const material4 = new THREE.MeshBasicMaterial( {map: texture4});
-    const texture5 = new THREE.TextureLoader().load("/cube5") // make 5
+    const texture5 = new THREE.TextureLoader().load("app/cube5") // make 5
     const material5 = new THREE.MeshBasicMaterial( {map: texture5}); //make 5
     cube1 = new THREE.Mesh(geometry, material1);
     cube2 = new THREE.Mesh(geometry, material2);
