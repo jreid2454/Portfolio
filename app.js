@@ -128,8 +128,8 @@ app.get("/backEndPic", (req, res) =>{
 app.get("/reactPic", (req, res) =>{
     res.sendFile(__dirname + "/landingPageImg/react.png")
 })
-app.get("/tribalPic", (req, res) =>{
-    res.sendFile(__dirname + "/landingPageImg/tribal.png")
+app.get("/resumPic", (req, res) =>{
+    res.sendFile(__dirname + "/landingPageImg/resumai.png")
 })
 app.get("/jquery", (req, res) => {
     res.sendFile(__dirname + "/" + "jquery.js")
